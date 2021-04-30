@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+    background-image: radial-gradient(circle at 12.5% 12.5%, #dcb744 0, #e5af41 5.56%, #eea740 11.11%, #f59c40 16.67%, #fa9141 22.22%, #ff8444 27.78%, #ff7547 33.33%, #ff644c 38.89%, #ff5152 44.44%, #ff3858 50%, #fb1160 55.56%, #f50069 61.11%, #ed0075 66.67%, #e40082 72.22%, #d80090 77.78%, #ca009f 83.33%, #b800ae 88.89%, #a300bd 94.44%, #8912cb 100%);
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 1vw;
+    height: 100vh;
+    padding: 75px;
+    color: white;
+    text-align: center;
+}
+
+img {
+    width: 20vw;
+    height: 50vh;
+    border-radius: 100px;
+}
+
+.column2 {
+    width: 50%;
+    padding: 75px;
+    float: left;
+}
+
+#info {
+    background-color: white;
+    border-radius: 50px;
+    margin: 50px;
+}
+
+.About>h2 {
+    font-size: 30px;
+}
+
+.column1 {
+    width: 100%;
+    float: left;
+    padding: 75px;
+}
+
+#experience {
+    background-color: white;
+    border-radius: 50px;
+    margin: 50px;
+}
+
+#experience h2 {
+    text-align: center;
+    font-size: 3vw;
+    color: blueviolet;
+    ;
+}
+
+:root {
+    --border-fondo1: 20px solid rgb(34, 231, 34, .3);
+    --border-fondo2: 20px solid rgba(206, 11, 11, 0.3);
+    --border-fondo3: 20px solid rgba(6, 22, 168, 0.3);
+    --border1: 20px solid rgb(10, 214, 10);
+    --border2: 20px solid rgb(204, 10, 4);
+    --border3: 20px solid rgba(5, 21, 170);
+}
+
+.column2 .progreso {
+    margin: 130px auto;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    /*border-left: var(--border3);
+    border-right: var(--border3);
+    border-top: var(--border3);
+    border-bottom: 25px solid transparent;*/
+    position: relative;
+    color: blueviolet;
+    text-align: center;
+}
+
+.pro-1 {
+    border: var(--border-fondo1);
+    color: rgb(10, 214, 10);
+}
+
+.pro-2 {
+    border: var(--border-fondo2);
+    color: rgb(204, 10, 4);
+}
+
+.pro-3 {
+    border: var(--border-fondo3);
+    color: rgba(5, 21, 170);
+}
+
+.progreso h1 {
+    font-family: sans-serif;
+    margin-bottom: -37px;
+}
+
+.progreso h1,
+h2 {
+    margin-top: 40px;
+}
+
+.progreso h2 {
+    font-size: 0.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.progreso .circle {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    transform: rotate(-135deg);
+}
+
+.circle1 {
+    border-top: var(--border1);
+    border-left: var(--border1);
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    animation: rotar1 1s linear forwards;
+    animation-delay: 1s;
+}
+
+.circle2 {
+    border-top: var(--border2);
+    border-left: var(--border2);
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    animation: rotar2 1s linear forwards;
+    animation-delay: 2s;
+}
+
+.circle3 {
+    border-top: var(--border3);
+    border-left: var(--border3);
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    animation: rotar3 1s linear forwards;
+    animation-delay: 3s;
+}
+
+@keyframes rotar1 {
+    100% {
+        transform: rotate(-25deg);
+    }
+}
+
+@keyframes rotar2 {
+    100% {
+        transform: rotate(-85deg);
+    }
+}
+
+@keyframes rotar3 {
+    100% {
+        transform: rotate(25deg);
+    }
+}
