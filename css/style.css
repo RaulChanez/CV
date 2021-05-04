@@ -18,6 +18,12 @@ body {
     clear: both;
 }
 
+#redes a svg {
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+}
+
 header {
     background-size: cover;
     background-attachment: fixed;
@@ -29,8 +35,8 @@ header {
 }
 
 img {
-    width: 20vw;
-    height: 50vh;
+    width: 25vw;
+    height: 60vh;
     border-radius: 100px;
 }
 
@@ -50,129 +56,271 @@ img {
     font-size: 30px;
 }
 
+
+/*Experiencia*/
+
 .column1 {
     width: 100%;
     float: left;
-    padding: 75px;
+    padding: 20px;
 }
 
 #experience {
     background-color: white;
     border-radius: 50px;
-    margin: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 10px;
 }
 
-#experience h2 {
-    text-align: center;
-    font-size: 3vw;
+#experience .column1 {
     color: blueviolet;
-    ;
+    text-align: center;
+    font-size: 40px;
 }
 
-:root {
-    --border-fondo1: 20px solid rgb(34, 231, 34, .3);
-    --border-fondo2: 20px solid rgba(206, 11, 11, 0.3);
-    --border-fondo3: 20px solid rgba(6, 22, 168, 0.3);
-    --border1: 20px solid rgb(10, 214, 10);
-    --border2: 20px solid rgb(204, 10, 4);
-    --border3: 20px solid rgba(5, 21, 170);
-}
 
-.column2 .progreso {
-    margin: 130px auto;
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    /*border-left: var(--border3);
-    border-right: var(--border3);
-    border-top: var(--border3);
-    border-bottom: 25px solid transparent;*/
+/*Barra de progreso*/
+
+.box {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    color: blueviolet;
-    text-align: center;
+    flex-direction: column;
+    transition: transform .2s;
+    padding: 10px;
 }
 
-.pro-1 {
-    border: var(--border-fondo1);
-    color: rgb(10, 214, 10);
+.box:hover {
+    transform: scale(1.3);
 }
 
-.pro-2 {
-    border: var(--border-fondo2);
-    color: rgb(204, 10, 4);
+.box .percent {
+    width: 150px;
+    height: 150px;
+    position: relative;
 }
 
-.pro-3 {
-    border: var(--border-fondo3);
-    color: rgba(5, 21, 170);
+.box .percent svg {
+    width: 150px;
+    height: 150px;
+    position: relative;
 }
 
-.progreso h1 {
-    font-family: sans-serif;
-    margin-bottom: -37px;
+.box .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
 }
 
-.progreso h1,
-h2 {
-    margin-top: 40px;
+.box .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #FBB0D1;
 }
 
-.progreso h2 {
-    font-size: 0.5vw;
-    font-family: Arial, Helvetica, sans-serif;
+
+/*Spanish*/
+
+.box .spanish svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+    stroke: blueviolet;
 }
 
-.progreso .circle {
-    border-radius: 50%;
-    height: 100%;
+
+/*Catalán*/
+
+.box .catalan svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+    stroke: blueviolet;
+}
+
+
+/*Inglés*/
+
+.box .english svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 50) / 100);
+    stroke: blueviolet;
+}
+
+
+/*HTML-5*/
+
+.box .html svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke: red;
+}
+
+
+/*CSS-3*/
+
+.box .css svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke: red;
+}
+
+
+/*Java*/
+
+.box .java svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 20) / 100);
+    stroke: red;
+}
+
+
+/*C##*/
+
+.box .csh svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 30) / 100);
+    stroke: red;
+}
+
+
+/*liderazjo*/
+
+.box .lider svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: yellow;
+}
+
+
+/*Compromiso*/
+
+.box .comp svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
+    stroke: yellow;
+}
+
+.box .percent .num {
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: -20px;
-    left: -20px;
-    transform: rotate(-135deg);
+    color: blueviolet;
 }
 
-.circle1 {
-    border-top: var(--border1);
-    border-left: var(--border1);
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    animation: rotar1 1s linear forwards;
-    animation-delay: 1s;
+.box .percent .num h2 {
+    font-size: 30px;
 }
 
-.circle2 {
-    border-top: var(--border2);
-    border-left: var(--border2);
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    animation: rotar2 1s linear forwards;
-    animation-delay: 2s;
+.box .percent .num h2 span {
+    font-size: 24px;
 }
 
-.circle3 {
-    border-top: var(--border3);
-    border-left: var(--border3);
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    animation: rotar3 1s linear forwards;
-    animation-delay: 3s;
+.box .text {
+    padding 10px 0 0;
+    color: blueviolet;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-@keyframes rotar1 {
-    100% {
-        transform: rotate(-25deg);
+#studies {
+    background-color: white;
+    border-radius: 50px;
+    margin: 50px;
+    text-align: center;
+    color: blueviolet;
+}
+
+.column3>h2 {
+    font-size: 20px;
+}
+
+.column3>h3 {
+    font-size: 10px;
+    color: black;
+}
+
+.column3>iframe {
+    width: 20vw;
+    height: 40vh;
+}
+
+.column3 {
+    width: 33.33%;
+    float: left;
+    padding: 20px;
+}
+
+#video {
+    background-color: white;
+    border-radius: 50px;
+    margin: 50px;
+    text-align: center;
+    color: blueviolet;
+    font-size: 30px;
+}
+
+.video>iframe {
+    width: 70vw;
+    height: 90vh;
+    border-color: blueviolet;
+}
+
+footer {
+    background-color: white;
+    border-radius: 50px;
+    margin: 50px;
+    text-align: center;
+    color: blueviolet;
+    font-size: 10px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+@media screen and (max-width:700px) {
+    header h1 {
+        font-size: 5vw;
     }
-}
-
-@keyframes rotar2 {
-    100% {
-        transform: rotate(-85deg);
+    header p {
+        font-size: 3vw;
     }
-}
-
-@keyframes rotar3 {
-    100% {
-        transform: rotate(25deg);
+    img {
+        width: 50vw;
+    }
+    header {
+        padding: 20px;
+    }
+    .column2 {
+        width: 100%;
+    }
+    .box {
+        width: 50%;
+    }
+    #experience {
+        margin: 50px;
+    }
+    footer {
+        margin: 50px;
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+    .box:hover {
+        transform: scale(1.1.5);
+    }
+    .video>iframe {
+        height: 50vh;
+        width: 60vw;
+    }
+    #video {
+        font-size: 2vw;
+        padding-bottom: 10px;
+    }
+    .column3 {
+        width: 100%;
+    }
+    .column3>iframe {
+        width: 100%;
     }
 }
