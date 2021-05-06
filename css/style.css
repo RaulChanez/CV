@@ -9,6 +9,16 @@ body {
     background-image: radial-gradient(circle at 12.5% 12.5%, #dcb744 0, #e5af41 5.56%, #eea740 11.11%, #f59c40 16.67%, #fa9141 22.22%, #ff8444 27.78%, #ff7547 33.33%, #ff644c 38.89%, #ff5152 44.44%, #ff3858 50%, #fb1160 55.56%, #f50069 61.11%, #ed0075 66.67%, #e40082 72.22%, #d80090 77.78%, #ca009f 83.33%, #b800ae 88.89%, #a300bd 94.44%, #8912cb 100%);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-image: radial-gradient(circle at 12.5% 12.5%, #dcb744 0, #e5af41 5.56%, #eea740 11.11%, #f59c40 16.67%, #fa9141 22.22%, #ff8444 27.78%, #ff7547 33.33%, #ff644c 38.89%, #ff5152 44.44%, #ff3858 50%, #fb1160 55.56%, #f50069 61.11%, #ed0075 66.67%, #e40082 72.22%, #d80090 77.78%, #ca009f 83.33%, #b800ae 88.89%, #a300bd 94.44%, #8912cb 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+}
+
 
 /* Clear floats after the columns */
 
@@ -62,7 +72,7 @@ img {
 .column1 {
     width: 100%;
     float: left;
-    padding: 20px;
+    padding: 10px;
 }
 
 #experience {
@@ -207,7 +217,6 @@ img {
     justify-content: center;
     align-items: center;
     position: absolute;
-    color: blueviolet;
 }
 
 .box .percent .num h2 {
@@ -220,9 +229,20 @@ img {
 
 .box .text {
     padding 10px 0 0;
-    color: blueviolet;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+.box .blueviolet {
+    color: blueviolet;
+}
+
+.box .red {
+    color: red;
+}
+
+.box .amarillo {
+    color: yellow;
 }
 
 #studies {
@@ -233,24 +253,32 @@ img {
     color: blueviolet;
 }
 
-.column3>h2 {
+#studies>.column1 {
+    font-size: 40px;
+    padding-bottom: 5px;
+}
+
+.column1>h2 {
+    font-size: 2vw;
+}
+
+.column2>h2 {
     font-size: 20px;
 }
 
-.column3>h3 {
+.column2>h3 {
     font-size: 10px;
     color: black;
 }
 
-.column3>iframe {
-    width: 20vw;
-    height: 40vh;
+.secun {
+    height: 60vh;
+    width: 35vw;
 }
 
-.column3 {
-    width: 33.33%;
-    float: left;
-    padding: 20px;
+.medi {
+    height: 60vh;
+    width: 35vw;
 }
 
 #video {
@@ -260,6 +288,7 @@ img {
     text-align: center;
     color: blueviolet;
     font-size: 30px;
+    padding-bottom: 10px;
 }
 
 .video>iframe {
@@ -277,6 +306,7 @@ footer {
     font-size: 10px;
     margin-left: 500px;
     margin-right: 500px;
+    padding: 10px;
 }
 
 @media screen and (max-width:700px) {
@@ -321,6 +351,14 @@ footer {
         width: 100%;
     }
     .column3>iframe {
+        width: 100%;
+    }
+    .secun {
+        height: 50vh;
+        width: 100%;
+    }
+    .medi {
+        height: 50vh;
         width: 100%;
     }
 }
